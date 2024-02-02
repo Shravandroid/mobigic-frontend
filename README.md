@@ -19,14 +19,22 @@ node version: v21.6.1
 react version: v18.2.0
 npm version: 10.2.4
 MongoDB version: 6.0.5
-
+````
 
 ### Installation
 
 1. Clone the repository:
-
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://github.com/Shravandroid/mobigic-frontend.git
+2. Navigate to the project directory:
+   cd mobigic-frontend
+3. Install Dependencies:
+   npm install
+4. Run the React app:
+   npm start
+5. # Run the Node.js server
+   nodemon index
+
 
 
 ### `npm test`
