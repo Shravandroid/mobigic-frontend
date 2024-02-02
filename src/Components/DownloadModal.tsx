@@ -38,7 +38,6 @@ const DownloadModal = ({
           },
         }
       );
-      console.log("res aala ", res);
       if (res.data.isCodeValid === true) {
         const fileUrl =
           process.env.REACT_APP_MOBIGIC_BACKEND_LINK + IdCode?.path;
