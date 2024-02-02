@@ -33,7 +33,7 @@ MongoDB version: 6.0.5
 4. Run the React app:
    npm start
 5. Run the Node.js server
-   nodemon index
+   nodemon index or node index.js
 
 
 
