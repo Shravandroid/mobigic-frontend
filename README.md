@@ -14,6 +14,21 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+### Prerequisites
+node version: v21.6.1
+react version: v18.2.0
+npm version: 10.2.4
+MongoDB version: 6.0.5
+
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+
+
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
