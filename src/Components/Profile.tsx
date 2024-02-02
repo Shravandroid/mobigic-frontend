@@ -129,7 +129,6 @@ export const Profile = () => {
                   "image/png",
                   "image/jpg",
                   "image/jpeg",
-                  "application/pdf",
                   "image/jfif",
                 ];
 
@@ -137,7 +136,7 @@ export const Profile = () => {
                   // 1024000 is 1 MB * 10 MB
                   toast.error("File size should be less than 10 MB");
                 } else if (!allowedFileTypes.includes(file?.type)) {
-                  toast.error("Only png, jpg, jpeg, pdf files are allowed.");
+                  toast.error("Only png, jpg, jpeg files are allowed.");
                 } else {
                   setValue("file", file);
                   setSelectedFile(file);
