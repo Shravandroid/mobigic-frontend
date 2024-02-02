@@ -19,9 +19,9 @@ node version: v21.6.1
 react version: v18.2.0
 npm version: 10.2.4
 MongoDB version: 6.0.5
-````
 
-### Installation
+
+### `Installation`
 
 1. Clone the repository:
    ```bash
