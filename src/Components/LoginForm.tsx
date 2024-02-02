@@ -30,7 +30,10 @@ const LoginForm = () => {
       const response = await axios.post("http://localhost:4000/login", payload);
       if (response?.data?.status === 201) {
         toast.success(`${response.data.message}`);
+      } else if (response?.data?.status === 401){
+        toast.error(`${response.data.message}`);
       }
+
       if (response && response.data.accessToken) {
         const token = response.data.accessToken;
         sessionStorage.setItem("token", token);
@@ -39,6 +42,7 @@ const LoginForm = () => {
       }
     } catch (error) {
       console.error("Error registering user:", error);
+      toast.error(`Invalid username or password`);
     }
   };
 
