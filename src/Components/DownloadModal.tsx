@@ -4,6 +4,7 @@ import { InventoryType } from "./Profile";
 import { FaRegCopy } from "react-icons/fa";
 import axios from "axios";
 import { AppContext } from "../App";
+import { toast } from "react-toastify";
 
 type props = {
   openDownloadModal: Boolean;
@@ -26,7 +27,7 @@ const DownloadModal = ({
   const handleDownload = async () => {
     if (IdCode) {
       const payload = {
-        code: IdCode?.code,
+        code: Number(inputValue),
         id: IdCode?._id,
       };
       const res = await axios.post(
@@ -38,7 +39,7 @@ const DownloadModal = ({
           },
         }
       );
-      if (res.data.isCodeValid === true) {
+      if (res.data.isCodeValid == true) {
         const fileUrl =
           process.env.REACT_APP_MOBIGIC_BACKEND_LINK + IdCode?.path;
         fetch(fileUrl)
@@ -56,13 +57,12 @@ const DownloadModal = ({
             console.error("Error downloading the file:", error)
           );
         setOpenDownloadModal(false);
-      } else if (res.data.isCodeValid === false) {
-        console.error("Code is incorrect");
+      } else if (res.data.isCodeValid == false) {
+        toast.error("Provided code is incorrect");
+        setOpenDownloadModal(true);
       }
     }
   };
-
-  console.log("data milala", IdCode);
 
   return (
     <div
